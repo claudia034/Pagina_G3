@@ -1,224 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campamento Familiar 2025 - Grupo Scout 3 Javier</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campamentos Nacionales 2025 - Grupo Scout 3 Javier</title>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../style.css" />
+  <!-- Tailwind CSS + Typography -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
-    <!-- Barra de Navegación -->
-    <nav class="bg-green-700 p-4 shadow-lg fixed w-full z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo y Nombre del Grupo -->
-            <a href="../index.html" class="flex items-center space-x-3 text-white text-2xl font-bold">
-                <img src="../images/logo.jpg" alt="Logo Grupo Scout 3 Javier" class="w-10 h-10 rounded-full">
-                <span>Grupo Scout 3 Javier</span>
-            </a>
+  <!-- Barra de Navegación -->
+  <nav class="bg-green-700 p-4 shadow-lg fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3 text-white text-2xl font-bold">
+        <img src="../images/logo.jpg" alt="Logo Grupo Scout 3 Javier" class="w-10 h-10 rounded-full">
+        <span>Grupo Scout 3 Javier</span>
+      </a>
 
-            <!-- Menú de Navegación (Desktop) -->
-            <div class="hidden md:flex space-x-6">
-                <a href="../index.html#inicio" class="text-white hover:text-green-200 transition duration-300">Inicio</a>
-                <a href="../index.html#quienes-somos" class="text-white hover:text-green-200 transition duration-300">Quiénes Somos</a>
-                <a href="../index.html#ramas" class="text-white hover:text-green-200 transition duration-300">Ramas</a>
-                <a href="../index.html#actividades" class="text-white hover:text-green-200 transition duration-300">Actividades</a>
-                <a href="../index.html#galeria" class="text-white hover:text-green-200 transition duration-300">Galería</a>
-                <a href="../index.html#contacto" class="text-white hover:text-green-200 transition duration-300">Contacto</a>
-            </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="../index.html#inicio" class="text-white hover:text-green-200">Inicio</a>
+        <a href="../index.html#quienes-somos" class="text-white hover:text-green-200">Quiénes Somos</a>
+        <a href="../index.html#ramas" class="text-white hover:text-green-200">Ramas</a>
+        <a href="../index.html#actividades" class="text-white hover:text-green-200">Actividades</a>
+        <a href="../index.html#galeria" class="text-white hover:text-green-200">Galería</a>
+        <a href="../index.html#contacto" class="text-white hover:text-green-200">Contacto</a>
+      </div>
 
-            <!-- Botón de Menú Hamburguesa (Mobile) -->
-            <div class="md:hidden">
-                <button id="menu-button" class="hamburger-menu flex flex-col justify-around w-8 h-6">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+      <div class="md:hidden">
+        <button id="menu-button" class="hamburger-menu flex flex-col justify-around w-8 h-6">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <main class="pt-24 pb-16 bg-gray-50 min-h-screen">
+    <article class="container mx-auto px-6 lg:px-8 max-w-5xl">
+
+      <!-- Header -->
+      <header class="mb-10">
+        <a href="../index.html#actividades" class="inline-flex items-center text-green-600 hover:text-green-700 mb-5">
+          <i class="fas fa-arrow-left mr-2"></i>
+          Regresar a Actividades
+        </a>
+
+        <div class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+          <p class="text-sm font-semibold text-green-700 uppercase tracking-wide mb-2">
+            Actividad Nacional
+          </p>
+
+          <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+            Campamentos Nacionales – Diciembre 2025
+          </h1>
+
+          <div class="mt-4 flex flex-wrap gap-3 text-gray-600">
+            <span class="inline-flex items-center">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              Diciembre 2025
+            </span>
+            <span class="text-gray-300">•</span>
+            <span class="inline-flex items-center">
+              <i class="fas fa-flag mr-2"></i>
+              Representando al G3 Javier
+            </span>
+          </div>
         </div>
+      </header>
 
-        <!-- Menú Móvil Desplegable -->
-        <div id="mobile-menu" class="hidden md:hidden bg-green-800 mt-4 py-2 rounded-lg shadow-xl">
-            <a href="../index.html#inicio" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Inicio</a>
-            <a href="../index.html#quienes-somos" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Quiénes Somos</a>
-            <a href="../index.html#ramas" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Ramas</a>
-            <a href="../index.html#actividades" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Actividades</a>
-            <a href="../index.html#galeria" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Galería</a>
-            <a href="../index.html#contacto" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Contacto</a>
-        </div>
-    </nav>
+      <!-- Cuerpo -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-    <!-- Contenido del Blog -->
-    <main class="pt-24 pb-16 bg-gray-50 min-h-screen">
-        <article class="container mx-auto px-6 lg:px-8 max-w-4xl">
-            <!-- Encabezado del artículo -->
-            <header class="mb-8">
-                <a href="../index.html#actividades" class="inline-flex items-center text-green-600 hover:text-green-700 mb-4 transition duration-300">
-                    <i class="fas fa-arrow-left mr-2"></i>
-                    Volver a Actividades
-                </a>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Campamento Familiar 2025</h1>
-                <div class="flex items-center text-gray-600 mb-6">
-                    <i class="fas fa-calendar-alt mr-2"></i>
-                    <span>12 de abril, 2025</span>
-                    <span class="mx-3">|</span>
-                    <i class="fas fa-map-marker-alt mr-2"></i>
-                    <span>San Ignacio, Chalatenango</span>
-                </div>
-            </header>
+        <!-- Columna principal -->
+        <div class="lg:col-span-2">
 
-            <!-- Imagen principal -->
-            <div class="mb-8 rounded-lg overflow-hidden shadow-xl">
-                <img src="../images/campfam3.jpg" alt="Campamento Familiar 2025" class="w-full h-auto object-cover">
-            </div>
-
-            <!-- Contenido del artículo -->
-            <div class="prose prose-lg max-w-none">
-                <section class="mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Una Aventura en la Naturaleza</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        El 12 de abril de 2025, el Grupo Scout 3 Javier vivió una experiencia extraordinaria en San Ignacio, Chalatenango. Nuestro campamento familiar fue un fin de semana lleno de juegos, risas y convivencia en familia, donde la naturaleza fue el escenario perfecto para fortalecer los lazos familiares y el espíritu scout.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        ¡Gracias por ser parte de esta gran aventura scout! Las familias disfrutaron de actividades al aire libre, aprendieron técnicas de campismo y compartieron momentos inolvidables bajo las estrellas.
-                    </p>
-                </section>
-
-                <section class="mb-8 bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Actividades del Campamento</h2>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-campground text-green-600 mt-1 mr-3"></i>
-                            <span><strong>Montaje de Carpas:</strong> Familias trabajando juntas para armar sus refugios, aprendiendo técnicas básicas de campismo.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-fire text-green-600 mt-1 mr-3"></i>
-                            <span><strong>Fogata Nocturna:</strong> Canciones, historias y reflexiones alrededor del fuego, creando memorias que durarán toda la vida.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-hiking text-green-600 mt-1 mr-3"></i>
-                            <span><strong>Caminatas Exploratorias:</strong> Recorridos por los senderos naturales de la zona, descubriendo la flora y fauna local.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-utensils text-green-600 mt-1 mr-3"></i>
-                            <span><strong>Cocina al Aire Libre:</strong> Preparación de alimentos en fogones improvisados, una verdadera experiencia scout.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-trophy text-green-600 mt-1 mr-3"></i>
-                            <span><strong>Juegos y Competencias:</strong> Olimpiadas familiares que promovieron el trabajo en equipo y la sana competencia.</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Experiencias Memorables</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        El campamento comenzó con la llegada de todas las familias el viernes por la tarde. La emoción era palpable mientras desempacábamos y armábamos nuestras carpas. Los más pequeños estaban entusiasmados por dormir en la naturaleza, mientras que los adultos recordaban sus propias experiencias de campamento.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        La noche del sábado fue especialmente mágica. Alrededor de la fogata, compartimos canciones tradicionales scouts, historias de aventuras pasadas y reflexionamos sobre los valores que nos unen como familia scout. El cielo estrellado de Chalatenango nos regaló un espectáculo natural inolvidable.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Las caminatas por los senderos nos permitieron conectar con la naturaleza de una manera especial. Los scouts más experimentados enseñaron a los nuevos miembros cómo orientarse, identificar plantas y respetar el medio ambiente. Fue un verdadero intercambio de conocimientos entre generaciones.
-                    </p>
-                </section>
-
-                <section class="mb-8 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Aprendizajes y Valores</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Este campamento no fue solo diversión, sino también una oportunidad de aprendizaje:
-                    </p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li><i class="fas fa-leaf text-blue-600 mr-2"></i><strong>Respeto por la naturaleza:</strong> Aprendimos a acampar sin dejar rastro, cuidando el medio ambiente.</li>
-                        <li><i class="fas fa-users text-blue-600 mr-2"></i><strong>Trabajo en equipo:</strong> Las familias colaboraron en todas las actividades, fortaleciendo sus vínculos.</li>
-                        <li><i class="fas fa-lightbulb text-blue-600 mr-2"></i><strong>Autonomía:</strong> Los jóvenes desarrollaron habilidades prácticas para la vida al aire libre.</li>
-                        <li><i class="fas fa-hands-helping text-blue-600 mr-2"></i><strong>Solidaridad:</strong> Compartimos recursos, conocimientos y experiencias con generosidad.</li>
-                    </ul>
-                </section>
-
-                <section class="mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Galería de Momentos</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Las sonrisas, la camaradería y el entusiasmo de todos los participantes quedaron capturados en cientos de fotografías. Desde el amanecer en las montañas hasta la ceremonia de clausura, cada momento fue especial.
-                    </p>
-                    <div class="bg-gray-100 p-4 rounded-lg text-center">
-                        <p class="text-gray-600 italic">Las mejores fotos del campamento están disponibles en nuestra galería y redes sociales.</p>
-                    </div>
-                </section>
-
-                <section class="mb-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Agradecimientos</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Queremos agradecer enormemente a:
-                    </p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li><i class="fas fa-heart text-green-600 mr-2"></i>Todas las familias que participaron con entusiasmo y compromiso</li>
-                        <li><i class="fas fa-heart text-green-600 mr-2"></i>Los dirigentes que planificaron y coordinaron cada detalle del campamento</li>
-                        <li><i class="fas fa-heart text-green-600 mr-2"></i>Los propietarios del terreno en San Ignacio por su hospitalidad</li>
-                        <li><i class="fas fa-heart text-green-600 mr-2"></i>Los padres de familia que apoyaron en la logística y alimentación</li>
-                    </ul>
-                </section>
-
-                <section class="mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Próximas Aventuras</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        El éxito de este campamento nos motiva a seguir organizando experiencias similares. Ya estamos planeando nuestro próximo campamento familiar, con nuevas actividades y desafíos que nos permitirán seguir creciendo como comunidad scout.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed">
-                        ¡Nos vemos en la próxima aventura! ¡Siempre Listos!
-                    </p>
-                </section>
-            </div>
-
-            <!-- Llamado a la acción -->
-            <div class="mt-12 bg-green-700 text-white p-8 rounded-lg text-center">
-                <h3 class="text-2xl font-bold mb-4">¿Quieres vivir esta experiencia?</h3>
-                <p class="mb-6">Únete a nuestra familia scout y participa en nuestros próximos campamentos.</p>
-                <a href="../index.html#contacto" class="inline-block bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-                    Contáctanos
-                </a>
-            </div>
-
-            <!-- Navegación entre posts -->
-            <div class="mt-12 pt-8 border-t border-gray-300 flex justify-between items-center">
-                <a href="blog-dia-familia.html" class="text-green-600 hover:text-green-700 font-semibold transition duration-300">
-                    <i class="fas fa-arrow-left mr-2"></i>
-                    Actividad anterior
-                </a>
-                <a href="blog-earth-tribe.html" class="text-green-600 hover:text-green-700 font-semibold transition duration-300">
-                    Siguiente actividad
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </article>
-    </main>
-
-    <!-- Pie de Página -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 lg:px-8 text-center">
-            <p class="mb-4">
-                &copy; 2025 Grupo Scout 3 Javier. Todos los derechos reservados.
+          <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+              Un diciembre lleno de aventura y aprendizaje
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Durante el mes de diciembre, integrantes de la <strong>Manada</strong>, <strong>Unidad</strong>,
+              <strong>Caminantes</strong> y <strong>Clan</strong> del <strong>Grupo Scout 3 Javier</strong>
+              participaron en distintos <strong>campamentos nacionales</strong>.
             </p>
-            <div class="flex justify-center space-x-6">
-                <a href="../index.html#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a>
-                <a href="../index.html#quienes-somos" class="text-gray-400 hover:text-white transition duration-300">Quiénes Somos</a>
-                <a href="../index.html#galeria" class="text-gray-400 hover:text-white transition duration-300">Galería</a>
-                <a href="../index.html#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a>
-            </div>
-            <p class="mt-4 text-gray-500 text-sm">
-                Parte de la Asociación de Scouts de El Salvador.
+            <p class="text-gray-700 leading-relaxed">
+              Estos espacios permitieron vivir el escultismo a plenitud, compartir con scouts de otros grupos,
+              fortalecer valores y crear recuerdos que quedarán para siempre.
             </p>
-        </div>
-    </footer>
+          </section>
 
-    <script src="../script.js"></script>
+          <section class="bg-green-50 rounded-2xl border border-green-100 p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+              Lo que dejó esta experiencia
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="font-semibold text-gray-800 mb-1">Convivencia nacional</p>
+                <p class="text-gray-600 text-sm">
+                  Compartiendo con scouts de todo el país.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="font-semibold text-gray-800 mb-1">Diversión y aventura</p>
+                <p class="text-gray-600 text-sm">
+                  Juegos, fogatas, actividades y mucha alegría.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="font-semibold text-gray-800 mb-1">Aprendizaje</p>
+                <p class="text-gray-600 text-sm">
+                  Nuevas habilidades, retos superados y crecimiento personal.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <p class="font-semibold text-gray-800 mb-1">Espíritu scout</p>
+                <p class="text-gray-600 text-sm">
+                  Vivir la Ley y la Promesa en cada momento.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Galería -->
+          <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Galería</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <img src="images/manada2.jpg" alt="Campamento Nacional 1" class="rounded-2xl shadow-lg h-48 md:h-56 w-full object-contain bg-white">
+              <img src="images/unidad.jpg" alt="Campamento Nacional 2" class="rounded-2xl shadow-lg h-48 md:h-56 w-full object-contain bg-white">
+              <img src="images/caminantes.jpg" alt="Campamento Nacional 3" class="rounded-2xl shadow-lg h-48 md:h-56 w-full object-contain bg-white">
+              <img src="images/clan.jpg" alt="Campamento Nacional 4" class="rounded-2xl shadow-lg h-48 md:h-56 w-full object-contain bg-white">
+            </div>
+          </section>
+
+          <!-- Cierre -->
+          <section class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">
+              Gracias por representar al G3 Javier
+            </h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Felicitamos a cada scout y scouter de la <strong>Manada, Unidad, Caminantes y Clan</strong>
+              por representar con orgullo al <strong>Grupo Scout 3 Javier</strong> en estos eventos nacionales.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Gracias por su compromiso, entusiasmo y por demostrar que el escultismo se vive con alegría,
+              respeto y espíritu de servicio. 💚
+            </p>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-28 space-y-6">
+
+            <section class="bg-white rounded-2xl shadow-md p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-3">Resumen</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex gap-3">
+                  <i class="fas fa-campground text-green-600 mt-1"></i>
+                  <span>Participación en campamentos nacionales.</span>
+                </li>
+                <li class="flex gap-3">
+                  <i class="fas fa-users text-green-600 mt-1"></i>
+                  <span>Manada, Unidad, Caminantes y Clan.</span>
+                </li>
+              </ul>
+            </section>
+
+            <section class="bg-green-700 text-white rounded-2xl shadow-md p-6">
+              <h3 class="text-lg font-bold mb-2">Mensaje</h3>
+              <p class="text-white/90">
+                Siempre listos para vivir la aventura scout. ⚜️
+              </p>
+            </section>
+
+          </div>
+        </aside>
+      </div>
+
+      <!-- Navegación -->
+      <div class="mt-12 pt-8 border-t border-gray-300 flex flex-col sm:flex-row gap-4 justify-between">
+        <a href="../index.html#actividades" class="text-green-600 font-semibold inline-flex items-center">
+          <i class="fas fa-arrow-left mr-2"></i>
+          Ver todas las actividades
+        </a>
+
+        <a href="blog-actividad-anterior.html" class="text-green-600 font-semibold inline-flex items-center">
+          Actividad anterior
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 text-center">
+    <p>&copy; 2025 Grupo Scout 3 Javier. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>
