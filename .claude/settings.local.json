@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(move \"c:\\\\Users\\\\Claudia\\\\Desktop\\\\Pagina_G3\\\\blog-dia-familia.html\" \"c:\\\\Users\\\\Claudia\\\\Desktop\\\\Pagina_G3\\\\blog\"\" && move \"c:UsersClaudiaDesktopPagina_G3blog-campamento-familiar.html\" \"c:UsersClaudiaDesktopPagina_G3blog\"\")",
+      "Bash(move:*)"
+    ]
+  }
+}

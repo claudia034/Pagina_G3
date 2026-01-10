@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Global Earth Tribe - Grupo Scout 3 Javier</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="bg-green-700 p-4 shadow-lg fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo y Nombre del Grupo -->
+            <a href="../index.html" class="flex items-center space-x-3 text-white text-2xl font-bold">
+                <img src="../images/logo.jpg" alt="Logo Grupo Scout 3 Javier" class="w-10 h-10 rounded-full">
+                <span>Grupo Scout 3 Javier</span>
+            </a>
+
+            <!-- Menú de Navegación (Desktop) -->
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html#inicio" class="text-white hover:text-green-200 transition duration-300">Inicio</a>
+                <a href="../index.html#quienes-somos" class="text-white hover:text-green-200 transition duration-300">Quiénes Somos</a>
+                <a href="../index.html#ramas" class="text-white hover:text-green-200 transition duration-300">Ramas</a>
+                <a href="../index.html#actividades" class="text-white hover:text-green-200 transition duration-300">Actividades</a>
+                <a href="../index.html#galeria" class="text-white hover:text-green-200 transition duration-300">Galería</a>
+                <a href="../index.html#contacto" class="text-white hover:text-green-200 transition duration-300">Contacto</a>
+            </div>
+
+            <!-- Botón de Menú Hamburguesa (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-button" class="hamburger-menu flex flex-col justify-around w-8 h-6">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 mt-4 py-2 rounded-lg shadow-xl">
+            <a href="../index.html#inicio" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Inicio</a>
+            <a href="../index.html#quienes-somos" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Quiénes Somos</a>
+            <a href="../index.html#ramas" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Ramas</a>
+            <a href="../index.html#actividades" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Actividades</a>
+            <a href="../index.html#galeria" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Galería</a>
+            <a href="../index.html#contacto" class="block px-4 py-2 text-white hover:bg-green-700 rounded-md transition duration-300" onclick="toggleMobileMenu()">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Contenido del Blog -->
+    <main class="pt-24 pb-16 bg-gray-50 min-h-screen">
+        <article class="container mx-auto px-6 lg:px-8 max-w-4xl">
+            <!-- Encabezado del artículo -->
+            <header class="mb-8">
+                <a href="../index.html#actividades" class="inline-flex items-center text-green-600 hover:text-green-700 mb-4 transition duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Volver a Actividades
+                </a>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Red Global Earth Tribe</h1>
+                <div class="flex items-center text-gray-600 mb-6">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    <span>22 de marzo, 2025</span>
+                    <span class="mx-3">|</span>
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>Colegio Externado de San José</span>
+                </div>
+            </header>
+
+            <!-- Imagen principal -->
+            <div class="mb-8 rounded-lg overflow-hidden shadow-xl">
+                <img src="../images/manada4.jpg" alt="Red Global Earth Tribe" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Contenido del artículo -->
+            <div class="prose prose-lg max-w-none">
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Un Logro Histórico para Nuestra Manada</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        El 22 de marzo de 2025, dos miembros de la manada del Grupo Scout 3 Javier alcanzaron un hito extraordinario: obtuvieron su entrada a la Red Global Earth Tribe, uno de los espacios más prestigiosos dentro del Desafío Scouts Go Solar.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Este logro representa no solo el esfuerzo individual de estos jóvenes scouts, sino también el compromiso de todo nuestro grupo con la sostenibilidad ambiental y la acción climática. Nos sentimos inmensamente orgullosos de ser parte de este movimiento global.
+                    </p>
+                </section>
+
+                <section class="mb-8 bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg border-l-4 border-green-600">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Qué es Earth Tribe?</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Earth Tribe es una red global de jóvenes comprometidos con la acción climática y la sostenibilidad ambiental. Como parte del programa Scouts Go Solar de la Organización Mundial del Movimiento Scout (OMMS), Earth Tribe conecta a scouts de todo el mundo que trabajan activamente para:
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-solar-panel text-green-600 mt-1 mr-3"></i>
+                            <span>Promover el uso de energías renovables y tecnologías limpias</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-tree text-green-600 mt-1 mr-3"></i>
+                            <span>Implementar proyectos de reforestación y conservación</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-recycle text-green-600 mt-1 mr-3"></i>
+                            <span>Reducir la huella de carbono en sus comunidades</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-users text-green-600 mt-1 mr-3"></i>
+                            <span>Educar y movilizar a otros jóvenes en la lucha contra el cambio climático</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">El Desafío Scouts Go Solar</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Scouts Go Solar es una iniciativa global que desafía a los scouts de todo el mundo a tomar acción concreta contra el cambio climático. El programa incluye varios niveles de participación y reconocimiento:
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Etapas del Desafío</h3>
+                        <ol class="space-y-3 text-gray-700 list-decimal pl-6">
+                            <li><strong>Aprender:</strong> Educarse sobre el cambio climático, las energías renovables y la sostenibilidad.</li>
+                            <li><strong>Actuar:</strong> Implementar proyectos concretos que reduzcan el impacto ambiental.</li>
+                            <li><strong>Compartir:</strong> Inspirar a otros mediante la difusión de experiencias y conocimientos.</li>
+                            <li><strong>Liderar:</strong> Convertirse en agentes de cambio en sus comunidades y formar parte de Earth Tribe.</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">El Camino hacia Earth Tribe</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Nuestros dos lobatos trabajaron arduamente durante varios meses para cumplir con los requisitos del desafío. Su viaje incluyó:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2"><i class="fas fa-book text-blue-600 mr-2"></i>Educación y Formación</h4>
+                            <p class="text-gray-700">Participaron en talleres sobre cambio climático, energías renovables y hábitos sostenibles.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2"><i class="fas fa-tools text-green-600 mr-2"></i>Proyectos Prácticos</h4>
+                            <p class="text-gray-700">Implementaron iniciativas en sus hogares y escuelas, como reducción de residuos y ahorro de energía.</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2"><i class="fas fa-bullhorn text-yellow-600 mr-2"></i>Concientización</h4>
+                            <p class="text-gray-700">Organizaron charlas y actividades para educar a otros miembros de la manada y sus familias.</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2"><i class="fas fa-chart-line text-purple-600 mr-2"></i>Medición de Impacto</h4>
+                            <p class="text-gray-700">Documentaron y midieron el impacto positivo de sus acciones en el medio ambiente.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Ceremonia de Reconocimiento</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        La ceremonia de ingreso a Earth Tribe se llevó a cabo en las instalaciones del Colegio Externado de San José, con la presencia de toda la manada, dirigentes, padres de familia y miembros de otras ramas del grupo.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Fue un momento emotivo donde nuestros dos lobatos recibieron sus insignias especiales de Earth Tribe, simbolizando su compromiso con el planeta y su rol como líderes ambientales. Sus ojos brillaban de orgullo mientras sus compañeros los aplaudían y celebraban su logro.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Durante la ceremonia, cada uno compartió su experiencia, los desafíos que enfrentaron y cómo este viaje transformó su forma de ver el mundo. Sus palabras inspiraron a otros scouts a seguir sus pasos y unirse al movimiento.
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Impacto y Proyección</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        La entrada de nuestros scouts a Earth Tribe no es el final, sino el comienzo de una nueva etapa. Como miembros de esta red global, ahora tienen acceso a:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-globe text-green-600 mr-2"></i>Una red internacional de jóvenes líderes ambientales</li>
+                        <li><i class="fas fa-graduation-cap text-green-600 mr-2"></i>Recursos educativos avanzados sobre sostenibilidad</li>
+                        <li><i class="fas fa-handshake text-green-600 mr-2"></i>Oportunidades de colaboración en proyectos globales</li>
+                        <li><i class="fas fa-award text-green-600 mr-2"></i>Reconocimiento internacional de su trabajo ambiental</li>
+                        <li><i class="fas fa-comments text-green-600 mr-2"></i>Plataformas para compartir experiencias y aprender de scouts de otros países</li>
+                    </ul>
+                </section>
+
+                <section class="mb-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestro Compromiso Continúa</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Este logro motiva a todo el Grupo Scout 3 Javier a intensificar sus esfuerzos en favor del medio ambiente. Estamos desarrollando nuevos proyectos de sostenibilidad que incluyen:
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-seedling text-green-600 mr-2"></i>Campaña de reforestación en zonas urbanas</li>
+                        <li><i class="fas fa-shopping-bag text-green-600 mr-2"></i>Programa de reducción de plásticos de un solo uso</li>
+                        <li><i class="fas fa-lightbulb text-green-600 mr-2"></i>Talleres de eficiencia energética para la comunidad</li>
+                        <li><i class="fas fa-bicycle text-green-600 mr-2"></i>Promoción de movilidad sostenible</li>
+                    </ul>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Mensaje para Futuros Earth Tribe</h2>
+                    <div class="bg-gray-100 p-6 rounded-lg italic text-gray-700">
+                        <p class="mb-3">
+                            "A todos los scouts que sueñan con marcar la diferencia: el camino hacia Earth Tribe es desafiante pero increíblemente gratificante. Cada pequeña acción cuenta, cada proyecto suma, cada persona que educas se convierte en otro agente de cambio."
+                        </p>
+                        <p class="mb-3">
+                            "No esperen a ser perfectos, empiecen donde están, con lo que tienen. El planeta necesita de todos nosotros, y juntos podemos construir un futuro más verde y sostenible."
+                        </p>
+                        <p class="font-semibold text-right">- Miembros de Earth Tribe, Grupo Scout 3 Javier</p>
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Celebrando el Éxito</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Estamos inmensamente orgullosos de nuestros dos lobatos y su dedicación a la causa ambiental. Su logro es un recordatorio de que, sin importar la edad, todos podemos contribuir a un mundo mejor. ¡Felicitaciones, y que esta sea solo la primera de muchas victorias en su camino como scouts comprometidos con el planeta!
+                    </p>
+                </section>
+            </div>
+
+            <!-- Llamado a la acción -->
+            <div class="mt-12 bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-lg text-center">
+                <h3 class="text-2xl font-bold mb-4">¿Te inspira esta historia?</h3>
+                <p class="mb-6">Únete al Grupo Scout 3 Javier y sé parte del cambio que nuestro planeta necesita.</p>
+                <a href="../index.html#contacto" class="inline-block bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                    Únete a Nosotros
+                </a>
+            </div>
+
+            <!-- Navegación entre posts -->
+            <div class="mt-12 pt-8 border-t border-gray-300 flex justify-between items-center">
+                <a href="blog-campamento-familiar.html" class="text-green-600 hover:text-green-700 font-semibold transition duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Actividad anterior
+                </a>
+                <a href="../index.html#actividades" class="text-green-600 hover:text-green-700 font-semibold transition duration-300">
+                    Ver todas las actividades
+                    <i class="fas fa-th ml-2"></i>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <p class="mb-4">
+                &copy; 2025 Grupo Scout 3 Javier. Todos los derechos reservados.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="../index.html#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a>
+                <a href="../index.html#quienes-somos" class="text-gray-400 hover:text-white transition duration-300">Quiénes Somos</a>
+                <a href="../index.html#galeria" class="text-gray-400 hover:text-white transition duration-300">Galería</a>
+                <a href="../index.html#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a>
+            </div>
+            <p class="mt-4 text-gray-500 text-sm">
+                Parte de la Asociación de Scouts de El Salvador.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
