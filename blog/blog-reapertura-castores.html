@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reapertura de la Rama de Castores - Grupo Scout 3 Javier</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <nav class="bg-green-700 p-4 shadow-lg fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-3 text-white text-2xl font-bold">
+                <img src="../images/logo.jpg" alt="Logo Grupo Scout 3 Javier" class="w-10 h-10 rounded-full">
+                <span>Grupo Scout 3 Javier</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="../index.html#inicio" class="text-white hover:text-green-200">Inicio</a>
+                <a href="../index.html#quienes-somos" class="text-white hover:text-green-200">Quiénes Somos</a>
+                <a href="../index.html#ramas" class="text-white hover:text-green-200">Ramas</a>
+                <a href="../index.html#actividades" class="text-white hover:text-green-200">Actividades</a>
+                <a href="../index.html#galeria" class="text-white hover:text-green-200">Galería</a>
+                <a href="../index.html#contacto" class="text-white hover:text-green-200">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="hamburger-menu flex flex-col justify-around w-8 h-6">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 mt-4 py-2 rounded-lg shadow-xl">
+            <a href="../index.html#inicio" class="block px-4 py-2 text-white" onclick="toggleMobileMenu()">Inicio</a>
+            <a href="../index.html#quienes-somos" class="block px-4 py-2 text-white" onclick="toggleMobileMenu()">Quiénes Somos</a>
+            <a href="../index.html#ramas" class="block px-4 py-2 text-white" onclick="toggleMobileMenu()">Ramas</a>
+            <a href="../index.html#actividades" class="block px-4 py-2 text-white" onclick="toggleMobileMenu()">Actividades</a>
+            <a href="../index.html#galeria" class="block px-4 py-2 text-white" onclick="toggleMobileMenu()">Galería</a>
+            <a href="../index.html#contacto" class="block px-4 py-2 text-white" onclick="toggleMobileMenu()">Contacto</a>
+        </div>
+    </nav>
+    <main class="pt-24 pb-16 bg-gray-50 min-h-screen">
+        <article class="container mx-auto px-6 lg:px-8 max-w-6xl">
+            <header class="mb-10">
+                <a href="../index.html#actividades" class="inline-flex items-center text-green-600 hover:text-green-700 mb-5">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Regresar a Actividades
+                </a>
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                    <img src="../images/Castores/lanzamiento castores-24.jpg" alt="Reapertura de la rama de Castores" class="w-full h-72 md:h-96 object-cover">
+                    <div class="p-6 md:p-8">
+                        <p class="text-sm font-semibold text-green-700 uppercase tracking-wide mb-2">Nueva Rama</p>
+                        <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">Reapertura de la rama de Castores</h1>
+                        <p class="mt-4 text-lg text-gray-600 italic">"Ser Castor es dar el primer paso en una aventura que forma, inspira y deja huella para toda la vida."</p>
+                        <div class="mt-4 flex flex-wrap gap-3 text-gray-600">
+                            <span class="inline-flex items-center"><i class="fas fa-calendar-alt mr-2"></i>7 de marzo, 2026</span>
+                            <span class="text-gray-300">•</span>
+                            <span class="inline-flex items-center"><i class="fas fa-users mr-2"></i>25 niños participaron en la reapertura</span>
+                        </div>
+                        <p class="mt-4 text-sm font-medium text-gray-500">Escrito por Claudia Chávez</p>
+                    </div>
+                </div>
+            </header>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <section class="bg-white rounded-2xl shadow-md p-6 md:p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Una nueva etapa para los más pequeños</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">El 7 de marzo se llevó a cabo la reapertura de la rama de Castores, marcando un momento significativo dentro del grupo scout y dando inicio a una nueva etapa orientada al desarrollo de los más pequeños.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">En esta jornada se contó con la participación de 25 niños, quienes, con entusiasmo y curiosidad, comenzaron su camino dentro del movimiento scout. Esta reapertura representa no solo la activación de una nueva sección, sino también el compromiso de brindar a la niñez un espacio formativo basado en valores, aprendizaje y convivencia.</p>
+                        <p class="text-gray-700 leading-relaxed">El proceso que condujo a este momento fue resultado de la planificación, dedicación y esfuerzo conjunto de diversos actores que creyeron en la importancia de fortalecer el movimiento desde las primeras edades.</p>
+                    </section>
+                    <section class="bg-green-50 rounded-2xl border border-green-100 p-6 md:p-8 mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Origen y desarrollo del proyecto</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">La iniciativa de reactivar la rama de Castores surge a partir de una experiencia que viví en Guatemala, donde tuve la oportunidad de conocer el funcionamiento de una sección dirigida a niños pequeños, denominada "Cachorros".</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Durante ese período, mientras formaba parte de la rama Rover, nació en mí el interés por replicar este modelo, con el propósito de ofrecer a más niños la posibilidad de integrarse al escultismo desde temprana edad, fomentando en ellos valores, habilidades sociales y el contacto con la naturaleza.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Este interés se consolidó cuando mi mamá, Claudia Grande, participó en una de las reuniones en Guatemala, donde pudo observar directamente el desarrollo de las actividades y el impacto positivo en los niños. A partir de esa experiencia, ambas tuvimos claridad sobre la importancia de impulsar este proyecto y adaptarlo a nuestro contexto.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Para llevarlo a cabo, conté con el valioso apoyo de Miguel Linares, Roy Venegas y Sandra Platero, quienes contribuyeron mediante acompañamiento, orientación y gestión administrativa, facilitando la estructuración de la iniciativa.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Asimismo, el comité de padres desempeñó un rol fundamental, brindando respaldo, confianza y participación activa durante todo el proceso, lo que permitió fortalecer la implementación de la rama de Castores y asegurar su sostenibilidad.</p>
+                        <p class="text-gray-700 leading-relaxed">De manera paralela, este proceso ha tenido un valor significativo a nivel personal, ya que he tenido la oportunidad de compartirlo con Nicole Amador, miembro del movimiento scout y compañera de trayectoria durante más de once años, así como con mi mamá, quien asumió la responsabilidad de liderar la rama, aportando su experiencia en educación parvularia al desarrollo formativo de los niños.</p>
+                    </section>
+                    <section class="mb-10">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Galería</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <img src="../images/Castores/castores-2.jpg" alt="Castores durante la reapertura" class="rounded-2xl shadow-lg h-64 w-full object-cover">
+                            <img src="../images/Castores/Img2 (1).jpg" alt="Momentos de la reapertura de Castores" class="rounded-2xl shadow-lg h-64 w-full object-cover">
+                            <img src="../images/Castores/Img2 (2).jpg" alt="Primeras experiencias de Castores" class="rounded-2xl shadow-lg h-64 w-full object-cover">
+                        </div>
+                    </section>
+                    <section class="bg-white rounded-2xl shadow-md p-6 md:p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Impacto y proyección</h2>
+                        <p class="text-gray-700 leading-relaxed mb-4">La reapertura de la rama de Castores representa un paso importante en la consolidación del movimiento scout, al ampliar las oportunidades de participación desde la infancia.</p>
+                        <p class="text-gray-700 leading-relaxed mb-4">Esta sección se concibe como un espacio integral en el que los niños pueden iniciar su formación en valores, desarrollar habilidades sociales, fortalecer su autonomía y aprender mediante el juego y la exploración.</p>
+                        <p class="text-gray-700 leading-relaxed">De esta manera, el proyecto no solo responde a una necesidad actual, sino que también sienta las bases para el crecimiento futuro del movimiento, apostando por la formación de nuevas generaciones comprometidas con su entorno.</p>
+                    </section>
+                </div>
+                <aside class="lg:col-span-1">
+                    <div class="sticky top-28 space-y-6">
+                        <section class="bg-white rounded-2xl shadow-md p-6">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Resumen</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex gap-3"><i class="fas fa-seedling text-green-600 mt-1"></i><span>Reapertura oficial de la rama de Castores.</span></li>
+                                <li class="flex gap-3"><i class="fas fa-child text-green-600 mt-1"></i><span>25 niños iniciaron esta nueva etapa scout.</span></li>
+                                <li class="flex gap-3"><i class="fas fa-hands-helping text-green-600 mt-1"></i><span>Proyecto impulsado por trabajo en equipo y visión compartida.</span></li>
+                            </ul>
+                        </section>
+                        <section class="bg-green-700 text-white rounded-2xl shadow-md p-6">
+                            <h3 class="text-lg font-bold mb-2">Mensaje</h3>
+                            <p class="text-white/90">Los grandes cambios comienzan con pequeños pasos.</p>
+                        </section>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p>&copy; 2026 Grupo Scout 3 Javier. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+</html>
