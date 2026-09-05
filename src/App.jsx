@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, Route, Routes, useLocation, useParams } from "react-router-dom";
+import { Link, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
 
-const image = (path) => `/${path}`;
+const image = (path) => `${import.meta.env.BASE_URL}${path}`;
 const branches = [
   [
     "Castores",
@@ -227,6 +227,12 @@ const cards = [
 function Header() {
   const [open, setOpen] = useState(false);
   const loc = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (loc.pathname === "/" && loc.hash) {
+      document.getElementById(loc.hash.slice(1))?.scrollIntoView();
+    }
+  }, [loc.pathname, loc.hash]);
   const links = [
     ["Inicio", "inicio"],
     ["Quiénes Somos", "quienes-somos"],
@@ -239,11 +245,11 @@ function Header() {
   const go = (id) => {
     setOpen(false);
     if (id === "calendario") {
-      window.location.href = "/calendario";
+      navigate("/calendario");
       return;
     }
     if (loc.pathname === "/") document.getElementById(id)?.scrollIntoView();
-    else window.location.href = `/#${id}`;
+    else navigate(`/#${id}`);
   };
   return (
     <nav className="fixed top-0 z-50 w-full bg-green-700 p-4 shadow-lg">
