@@ -252,20 +252,20 @@ function Header() {
     else navigate(`/#${id}`);
   };
   return (
-    <nav className="fixed top-0 z-50 w-full bg-green-700 p-4 shadow-lg">
-      <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 text-white">
+    <nav className="site-header fixed top-0 z-50 w-full bg-green-700 px-4 py-3 shadow-lg">
+      <div className="container mx-auto flex items-center justify-between gap-3">
+        <Link to="/" className="flex min-w-0 items-center gap-2 text-white sm:gap-3">
           <img
             src={image("images/logo.jpg")}
-            className="h-12 w-12 rounded-full"
+            className="h-10 w-10 shrink-0 rounded-full sm:h-12 sm:w-12"
             alt="Logo Grupo Scout 3 Javier"
           />
           <span>
-            <b className="block text-2xl sm:text-3xl">Grupo Scout 3 Javier</b>
-            <small className="text-base">El Salvador</small>
+            <b className="block text-base leading-tight sm:text-xl xl:text-2xl">Grupo Scout 3 Javier</b>
+            <small className="text-xs sm:text-sm">El Salvador</small>
           </span>
         </Link>
-        <div className="hidden gap-6 md:flex">
+        <div className="hidden gap-4 text-sm xl:flex">
           {links.map(([x, id]) => (
             <button
               className="text-white hover:text-green-200"
@@ -277,18 +277,20 @@ function Header() {
           ))}
         </div>
         <button
-          className="text-2xl text-white md:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center text-2xl text-white xl:hidden"
           onClick={() => setOpen(!open)}
-          aria-label="Abrir menú"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           <i className={`fas ${open ? "fa-xmark" : "fa-bars"}`} />
         </button>
       </div>
       {open && (
-        <div className="container mx-auto mt-3 rounded-lg bg-green-800 py-2 md:hidden">
+        <div id="mobile-menu" className="container mx-auto mt-3 max-h-[70dvh] overflow-y-auto rounded-lg bg-green-800 py-2 xl:hidden">
           {links.map(([x, id]) => (
             <button
-              className="block w-full px-4 py-2 text-left text-white hover:bg-green-700"
+              className="block min-h-11 w-full px-4 py-2 text-left text-white hover:bg-green-700"
               onClick={() => go(id)}
               key={id}
             >
@@ -302,7 +304,7 @@ function Header() {
 }
 function Footer() {
   return (
-    <footer className="bg-gray-800 py-12 text-center text-white">
+    <footer className="bg-gray-800 px-4 pb-24 pt-10 text-center text-white md:py-12">
       <p className="text-lg">© 2026 Grupo Scout 3 Javier. Todos los derechos reservados.</p>
       <p className="mt-3 text-sm text-gray-400">
         Parte de la Asociación de Scouts de El Salvador.
@@ -313,7 +315,7 @@ function Footer() {
 function ContactBubble() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed bottom-6 right-6 z-[60] text-right">
+    <div className="contact-bubble fixed bottom-4 right-4 z-[60] text-right md:bottom-6 md:right-6">
       {open && (
         <div className="mb-3 w-64 rounded-2xl bg-white p-4 text-left shadow-2xl ring-1 ring-black/5">
           <p className="mb-3 font-bold text-gray-800">¿Cómo prefieres contactarnos?</p>
@@ -325,17 +327,17 @@ function ContactBubble() {
           </a>
         </div>
       )}
-      <button onClick={() => setOpen(!open)} aria-expanded={open} className="rounded-full bg-green-600 px-6 py-4 text-lg font-bold text-white shadow-xl transition hover:scale-105 hover:bg-green-700 md:px-7">
-        <i className="fas fa-comment-dots mr-2 text-xl" /> Contáctanos
+      <button onClick={() => setOpen(!open)} aria-label={open ? "Cerrar contacto" : "Contáctanos"} aria-expanded={open} className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-600 font-bold text-white shadow-xl transition hover:scale-105 hover:bg-green-700 md:h-auto md:w-auto md:gap-2 md:px-6 md:py-4">
+        <i aria-hidden="true" className={`fas ${open ? "fa-xmark" : "fa-comment-dots"} text-xl`} /><span className="hidden md:inline">Contáctanos</span>
       </button>
     </div>
   );
 }
 function Box({ title, light = false, children }) {
   return (
-    <div className="container mx-auto px-6 lg:px-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <h2
-        className={`section-title mx-auto mb-10 block w-fit text-center text-4xl font-bold ${light ? "text-white" : "text-gray-800"}`}
+        className={`section-title mx-auto mb-6 block w-fit text-center text-2xl font-bold sm:mb-10 md:text-4xl ${light ? "text-white" : "text-gray-800"}`}
       >
         {title}
       </h2>
@@ -348,7 +350,7 @@ function Card({ card }) {
   return (
     <article className="w-[88%] shrink-0 snap-start overflow-hidden rounded-lg bg-gray-50 shadow-md sm:w-[65%] lg:w-[calc(33.333%-1.35rem)]">
       <img src={image(pic)} className="h-56 w-full object-cover" alt={title} />
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <h3 className="mb-2 text-2xl font-semibold">{title}</h3>
         <p className="mb-4 text-sm text-gray-600">
           <i className="fas fa-calendar-alt mr-2" />
@@ -380,26 +382,26 @@ function Calendar() {
   const displayEvents = eventList;
 
   return (
-    <section id="calendario" className="bg-green-50 py-16">
+    <section id="calendario" className="bg-green-50 py-10 md:py-16">
       <Box title="Fechas Importantes">
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1.5fr_1fr]">
-          <div className="rounded-2xl bg-white p-5 shadow-lg md:p-8">
+          <div className="min-w-0 rounded-2xl bg-white p-3 shadow-lg sm:p-5 md:p-8">
             <div className="mb-6 flex items-center justify-between">
               <button onClick={() => changeMonth(-1)} className="rounded-full p-3 text-green-700 hover:bg-green-100" aria-label="Mes anterior"><i className="fas fa-chevron-left" /></button>
               <h3 className="capitalize text-xl font-bold text-gray-800 md:text-2xl">{monthName}</h3>
               <button onClick={() => changeMonth(1)} className="rounded-full p-3 text-green-700 hover:bg-green-100" aria-label="Mes siguiente"><i className="fas fa-chevron-right" /></button>
             </div>
-            <div className="grid grid-cols-7 gap-1 text-center text-sm md:gap-2">
+            <div className="grid grid-cols-7 gap-1 text-center text-xs sm:text-sm md:gap-2">
               {"Dom Lun Mar Mié Jue Vie Sáb".split(" ").map((day) => <div className="pb-2 font-bold text-green-700" key={day}>{day}</div>)}
               {Array.from({ length: firstDay }, (_, index) => <div key={`blank-${index}`} />)}
               {Array.from({ length: daysInMonth }, (_, index) => {
                 const day = index + 1;
                 const event = events[`${year}-${String(monthIndex + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`];
-                return <div className={`min-h-12 rounded-lg p-2 md:min-h-16 ${event ? "bg-green-600 font-bold text-white shadow-md" : "text-gray-700"}`} key={day}><span>{day}</span>{event && <span className="mt-1 block text-[10px] leading-tight md:text-xs">{event}</span>}</div>;
+                return <div className={`min-h-12 min-w-0 rounded-lg px-0.5 py-2 md:min-h-16 md:px-2 ${event ? "bg-green-600 font-bold text-white shadow-md" : "text-gray-700"}`} key={day}><span>{day}</span>{event && <span className="mt-1 block text-[10px] leading-tight md:text-xs">{event}</span>}</div>;
               })}
             </div>
           </div>
-          <aside className="rounded-2xl bg-green-700 p-7 text-white shadow-lg">
+          <aside className="rounded-2xl bg-green-700 p-5 text-white shadow-lg sm:p-7">
             <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-green-200">Próxima actividad</p>
             {displayEvents.length ? displayEvents.map(([key, name]) => <div key={key}><h3 className="mb-3 text-2xl font-bold">{name}</h3><p className="mb-4 text-lg"><i className="fas fa-calendar-day mr-2 text-green-200" />{new Date(`${key}T12:00:00`).toLocaleDateString("es-SV", { day: "numeric", month: "long", year: "numeric" })}</p><p className="leading-relaxed text-green-50">Únete a nuestro Acto Cívico, un evento diseñado para honrar nuestros valores patrios a través de la participación activa. Durante esta jornada, llevaremos a cabo una serie de iniciativas y actividades orientadas a fortalecer nuestra identidad cultural y reafirmar nuestro compromiso con la comunidad.</p></div>) : <p className="text-green-50">No hay actividades registradas para este mes.</p>}
           </aside>
@@ -448,6 +450,7 @@ function Home() {
     }, 500);
   };
   useEffect(() => {
+    if (window.matchMedia("(max-width: 767px), (prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(advanceBranches, 3000);
     return () => window.clearInterval(timer);
   }, []);
@@ -470,23 +473,23 @@ function Home() {
     <>
       <Header />
       <main>
-        <section id="inicio" className="relative h-screen overflow-hidden">
+        <section id="inicio" className="hero relative overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center transition-all duration-700"
             style={{ backgroundImage: `url(${image(slides[slide])})` }}
           />
           <div className="absolute inset-0 bg-black/60" />
-          <div className="relative z-10 flex h-full items-center justify-center p-6 text-center text-white">
+          <div className="hero-content relative z-10 flex h-full items-center justify-center px-10 text-center text-white md:p-16">
             <div>
-              <h1 className="mb-4 text-4xl font-extrabold md:text-6xl">
+              <h1 className="mb-4 text-3xl font-extrabold leading-tight md:text-6xl">
                 ¡Bienvenidos al Grupo Scout 3 Javier!
               </h1>
-              <p className="mb-8 text-lg md:text-xl">
+              <p className="mb-6 text-base md:mb-8 md:text-xl">
                 Donde la aventura, el aprendizaje y la amistad se unen para
                 formar líderes del mañana.
               </p>
               <button
-                className="rounded-full bg-green-500 px-8 py-3 font-bold shadow-lg hover:bg-green-600"
+                className="rounded-full bg-green-500 px-5 py-3 text-sm font-bold sm:px-8 sm:text-base shadow-lg hover:bg-green-600"
                 onClick={() =>
                   document.getElementById("quienes-somos").scrollIntoView()
                 }
@@ -496,7 +499,7 @@ function Home() {
             </div>
           </div>
           <button
-            className="absolute left-4 top-1/2 z-20 text-3xl text-white"
+            className="absolute left-0 top-1/2 z-20 flex h-11 w-9 items-center justify-center text-xl text-white md:left-4 md:text-3xl"
             onClick={() =>
               setSlide((slide - 1 + slides.length) % slides.length)
             }
@@ -505,7 +508,7 @@ function Home() {
             <i className="fas fa-chevron-left" />
           </button>
           <button
-            className="absolute right-4 top-1/2 z-20 text-3xl text-white"
+            className="absolute right-0 top-1/2 z-20 flex h-11 w-9 items-center justify-center text-xl text-white md:right-4 md:text-3xl"
             onClick={() => setSlide((slide + 1) % slides.length)}
             aria-label="Imagen siguiente"
           >
@@ -521,20 +524,20 @@ function Home() {
               />
             ))}
           </div>
-          <Link to="/calendario" className="event-float absolute bottom-20 left-1/2 z-20 flex w-[min(90%,380px)] -translate-x-1/2 items-center gap-4 rounded-2xl bg-white/95 p-3 text-left text-gray-800 shadow-2xl backdrop-blur transition hover:-translate-y-1 hover:bg-white md:bottom-8 md:left-8 md:translate-x-0">
+          <Link to="/calendario" className="event-float absolute bottom-14 left-1/2 z-20 flex w-[min(90%,380px)] -translate-x-1/2 items-center gap-4 rounded-2xl bg-white/95 p-3 text-left text-gray-800 shadow-2xl backdrop-blur transition hover:-translate-y-1 hover:bg-white md:bottom-8 md:left-8 md:translate-x-0">
             <div className="rounded-xl bg-green-700 px-3 py-2 text-center text-white"><span className="block text-2xl font-extrabold leading-none">19</span><span className="text-xs font-bold uppercase">Sep</span></div>
             <div><p className="text-xs font-bold uppercase tracking-wide text-green-700">Próximo evento</p><p className="font-bold">Acto cívico</p></div><i className="fas fa-arrow-right ml-auto text-green-700" />
           </Link>
         </section>
-        <section id="quienes-somos" className="bg-white py-16">
+        <section id="quienes-somos" className="bg-white py-10 md:py-16">
           <Box title="Quiénes Somos">
-            <div className="flex flex-col items-center gap-10 lg:flex-row">
+            <div className="flex flex-col items-center gap-6 md:gap-10 lg:flex-row">
               <img
                 src={image("images/campfam.jpg")}
                 className="w-full rounded-lg shadow-xl lg:w-1/2"
                 alt="Grupo Scout Javier en actividad"
               />
-              <div className="space-y-4 text-lg leading-relaxed text-gray-700 lg:w-1/2">
+              <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg lg:w-1/2">
                 <p>
                   El Grupo Scout 3 “Javier” forma parte de la Asociación de
                   Scouts de El Salvador. Desde nuestra fundación en 1934,
@@ -556,7 +559,7 @@ function Home() {
             </div>
           </Box>
         </section>
-        <section id="ramas" className="bg-gray-100 py-16">
+        <section id="ramas" className="bg-gray-100 py-10 md:py-16">
           <Box title="Nuestras Ramas">
             <div className="relative">
               <div
@@ -565,7 +568,7 @@ function Home() {
               >
                 {branchList.map(([name, text, pic, items]) => (
                   <article
-                    className="w-[72%] shrink-0 snap-start overflow-hidden rounded-lg bg-white shadow-xl sm:w-[52%] lg:w-[30%]"
+                    className="w-[86%] shrink-0 snap-start overflow-hidden rounded-lg bg-white shadow-xl sm:w-[52%] lg:w-[30%]"
                     key={name}
                   >
                     <img
@@ -573,7 +576,7 @@ function Home() {
                       className="h-48 w-full object-cover"
                       alt={name}
                     />
-                    <div className="p-6">
+                    <div className="p-4 sm:p-6">
                       <h3 className="mb-3 text-2xl font-semibold">{name}</h3>
                       <p className="mb-4 text-gray-600">{text}</p>
                       <ul className="list-disc space-y-1 pl-5 text-sm text-gray-700">
@@ -595,7 +598,7 @@ function Home() {
             </div>
           </Box>
         </section>
-        <section id="actividades" className="bg-white py-16">
+        <section id="actividades" className="bg-white py-10 md:py-16">
           <Box title="Nuestras Actividades">
             <div
               ref={activityRef}
@@ -631,7 +634,7 @@ function Home() {
             </div>
           </Box>
         </section>
-        <section id="galeria" className="bg-gray-100 py-16">
+        <section id="galeria" className="bg-gray-100 py-10 md:py-16">
           <Box title="Nuestra Galería de Fotos">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {gallery.map(([pic, title]) => (
@@ -665,21 +668,21 @@ function Home() {
             </div>
           </Box>
         </section>
-        <section id="contacto" className="bg-green-700 py-24 text-white">
+        <section id="contacto" className="bg-green-700 py-10 text-white md:py-24">
           <Box title="Contáctanos" light>
-            <div className="flex flex-col gap-12 lg:flex-row">
+            <div className="flex flex-col gap-8 md:gap-12 lg:flex-row">
               <div className="lg:w-1/2">
-                <p className="mb-8 text-xl leading-relaxed md:text-2xl">
+                <p className="mb-6 text-base leading-relaxed md:text-2xl">
                   ¿Interesado en unirte o tienes alguna pregunta? Estamos aquí
                   para ayudarte.
                 </p>
-                <p className="mb-6 flex items-start text-xl leading-relaxed md:text-2xl">
+                <p className="mb-6 flex items-start text-base leading-relaxed md:text-2xl">
                   <i className="fas fa-map-marker-alt mr-4 mt-1 text-2xl text-green-300 md:text-3xl" />
                   Colegio Externado de San José, San Salvador, El Salvador
                 </p>
-                <p className="flex items-center text-xl md:text-2xl">
+                <p className="flex items-center text-base md:text-2xl">
                   <i className="fas fa-envelope mr-4 text-2xl text-green-300 md:text-3xl" />
-                  <a className="underline" href="mailto:grupo03@scouts.org.sv">
+                  <a className="min-w-0 break-words underline" href="mailto:grupo03@scouts.org.sv">
                     grupo03@scouts.org.sv
                   </a>
                 </p>
@@ -700,7 +703,7 @@ function Home() {
                   </a>
                 </div>
               </div>
-              <div className="rounded-lg bg-white p-8 text-gray-800 shadow-xl lg:w-1/2">
+              <div className="min-w-0 rounded-lg bg-white p-4 text-gray-800 shadow-xl sm:p-8 lg:w-1/2">
                 <h3 className="mb-4 text-2xl font-bold">Ubicación</h3>
                 <p className="mb-5 text-lg">
                   Nos encontramos en el Externado de San José. ¡Te esperamos!
@@ -743,7 +746,7 @@ function Activities() {
                     className="h-56 w-full object-cover"
                     alt={title}
                   />
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <p className="mb-3 text-sm text-gray-500">
                       <i className="fas fa-calendar-alt mr-2" />
                       {date}
@@ -888,6 +891,10 @@ function NotFound() {
   );
 }
 export default function App() {
+  const location = useLocation();
+  useEffect(() => {
+    if (!location.hash) window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname, location.hash]);
   return (
     <>
       <Routes>

@@ -1,10 +1,17 @@
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: Inter, sans-serif; font-size: 20px; background: #f0f4f8; }
-.text-sm { font-size: 1rem !important; }
-.text-lg { font-size: 1.35rem !important; }
-.text-xl { font-size: 1.55rem !important; }
-.text-2xl { font-size: 1.85rem !important; }
-small { font-size: 1rem; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; font-family: Inter, sans-serif; font-size: 16px; line-height: 1.5; background: #f0f4f8; }
+.hero { height: 100svh; min-height: 640px; max-height: 1000px; }
+.hero-content { padding-top: 88px; padding-bottom: 180px; }
+.contact-bubble { bottom: max(1rem, env(safe-area-inset-bottom)); }
+@media (min-width: 768px) {
+  .hero { min-height: 720px; }
+  .hero-content { padding-top: 100px; padding-bottom: 160px; }
+  .contact-bubble { bottom: max(1.5rem, env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .event-float { animation: none !important; }
+}
 .section-title { position: relative; display: inline-block; padding-bottom: .5rem; }
 .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50%; height: 4px; border-radius: 999px; background: #0e8c43; }
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
