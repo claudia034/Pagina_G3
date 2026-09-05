@@ -1,0 +1,14 @@
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, sans-serif; font-size: 20px; background: #f0f4f8; }
+.text-sm { font-size: 1rem !important; }
+.text-lg { font-size: 1.35rem !important; }
+.text-xl { font-size: 1.55rem !important; }
+.text-2xl { font-size: 1.85rem !important; }
+small { font-size: 1rem; }
+.section-title { position: relative; display: inline-block; padding-bottom: .5rem; }
+.section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50%; height: 4px; border-radius: 999px; background: #0e8c43; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+@keyframes event-float-in { from { opacity: 0; transform: translate(-50%, 24px); } to { opacity: 1; transform: translate(-50%, 0); } }
+.event-float { animation: event-float-in .7s ease-out .4s both; }
+@media (min-width: 768px) { .event-float { animation-name: event-float-in-desktop; } @keyframes event-float-in-desktop { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } } }
