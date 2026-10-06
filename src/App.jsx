@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
+import Seo from "./Seo.jsx";
+import { getPageSeo } from "./seo.js";
 
 const image = (path) => `${import.meta.env.BASE_URL}${path}`;
 const branches = [
@@ -333,14 +335,15 @@ function ContactBubble() {
     </div>
   );
 }
-function Box({ title, light = false, children }) {
+function Box({ title, light = false, heading = "h2", children }) {
+  const Heading = heading;
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2
+      <Heading
         className={`section-title mx-auto mb-6 block w-fit text-center text-2xl font-bold sm:mb-10 md:text-4xl ${light ? "text-white" : "text-gray-800"}`}
       >
         {title}
-      </h2>
+      </Heading>
       {children}
     </div>
   );
@@ -369,7 +372,7 @@ function Card({ card }) {
     </article>
   );
 }
-function Calendar() {
+function Calendar({ heading = "h2" }) {
   const [month, setMonth] = useState(new Date(2026, 8, 1));
   const year = month.getFullYear();
   const monthIndex = month.getMonth();
@@ -383,7 +386,7 @@ function Calendar() {
 
   return (
     <section id="calendario" className="bg-green-50 py-10 md:py-16">
-      <Box title="Fechas Importantes">
+      <Box title="Fechas Importantes" heading={heading}>
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1.5fr_1fr]">
           <div className="min-w-0 rounded-2xl bg-white p-3 shadow-lg sm:p-5 md:p-8">
             <div className="mb-6 flex items-center justify-between">
@@ -411,7 +414,7 @@ function Calendar() {
   );
 }
 function CalendarPage() {
-  return <><Header /><main className="min-h-screen pt-20"><Calendar /></main><Footer /></>;
+  return <><Header /><main className="min-h-screen pt-20"><Calendar heading="h1" /></main><Footer /></>;
 }
 function Home() {
   const slides = [
@@ -728,7 +731,7 @@ function Activities() {
     <>
       <Header />
       <main className="min-h-screen bg-gray-50 pb-16 pt-28">
-        <Box title="Todas Nuestras Actividades">
+        <Box title="Todas Nuestras Actividades" heading="h1">
           <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-gray-600">
             Explora las aventuras, campamentos y eventos especiales que hemos
             vivido como familia scout.
@@ -892,11 +895,14 @@ function NotFound() {
 }
 export default function App() {
   const location = useLocation();
+  const articleSlug = /^\/actividades\/([^/]+)\/?$/.exec(location.pathname)?.[1];
+  const pageSeo = getPageSeo(location.pathname.replace(/\/$/, "") || "/", Object.hasOwn(articles, articleSlug) ? articles[articleSlug] : undefined);
   useEffect(() => {
     if (!location.hash) window.scrollTo({ top: 0, behavior: "instant" });
   }, [location.pathname, location.hash]);
   return (
     <>
+      <Seo page={pageSeo} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/actividades" element={<Activities />} />
