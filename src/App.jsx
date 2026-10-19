@@ -309,7 +309,10 @@ function Footer() {
     <footer className="bg-gray-800 px-4 pb-24 pt-10 text-center text-white md:py-12">
       <p className="text-lg">© 2026 Grupo Scout 3 Javier. Todos los derechos reservados.</p>
       <p className="mt-3 text-sm text-gray-400">
-        Parte de la Asociación de Scouts de El Salvador.
+        Somos parte de la{" "}
+        <a href="https://www.scouts.org.sv/" target="_blank" rel="noreferrer" className="underline hover:text-white">
+          Asociación de Scouts de El Salvador
+        </a>.
       </p>
     </footer>
   );
@@ -321,6 +324,9 @@ function ContactBubble() {
       {open && (
         <div className="mb-3 w-64 rounded-2xl bg-white p-4 text-left shadow-2xl ring-1 ring-black/5">
           <p className="mb-3 font-bold text-gray-800">¿Cómo prefieres contactarnos?</p>
+          <a href="https://forms.gle/2uMvZcFBGNLVcDkx5" target="_blank" rel="noreferrer" className="mb-2 flex items-center gap-3 rounded-xl bg-green-50 px-3 py-2 text-green-800 hover:bg-green-100">
+            <i aria-hidden="true" className="fas fa-file-alt" /> Solicitar información
+          </a>
           <a href="mailto:grupo03@scouts.org.sv" className="mb-2 flex items-center gap-3 rounded-xl bg-green-50 px-3 py-2 text-green-800 hover:bg-green-100">
             <i className="fas fa-envelope" /> Enviar correo
           </a>
@@ -542,21 +548,26 @@ function Home() {
               />
               <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg lg:w-1/2">
                 <p>
-                  El Grupo Scout 3 “Javier” forma parte de la Asociación de
-                  Scouts de El Salvador. Desde nuestra fundación en 1934,
-                  formamos a niños, niñas y jóvenes a través del Método Scout e
-                  inculcamos respeto, responsabilidad, servicio y amor por la
-                  naturaleza.
+                  Somos el Grupo Scout #3 “Javier”, el grupo scout más antiguo en
+                  activo de El Salvador. Fundado en 1934 en el colegio Externado
+                  de San José, formamos parte importante de la historia del
+                  escultismo nacional y somos uno de los grupos fundadores de la
+                  Asociación de Scouts de El Salvador, constituida en 1940.
                 </p>
                 <p>
-                  Nuestra misión es contribuir a la educación de los jóvenes
+                  Acompañamos a niños, niñas y jóvenes en su crecimiento mediante
+                  el Método Scout, promoviendo el respeto, la responsabilidad, la
+                  amistad, el servicio a la comunidad y el amor por la naturaleza.
+                </p>
+                <p>
+                  Nuestra misión es contribuir a la educación de las nuevas generaciones
                   mediante un sistema de valores basado en la Promesa y la Ley
-                  Scout, para construir un mundo mejor.
+                  Scout, para construir un mundo mejor. A través de experiencias
+                  al aire libre, aprendemos haciendo, desarrollamos habilidades
+                  para la vida, trabajamos en equipo y buscamos ser mejores cada día.
                 </p>
                 <p>
-                  Ofrecemos un ambiente seguro y estimulante donde cada miembro
-                  descubre su potencial, desarrolla habilidades para la vida y
-                  hace amigos para siempre. ¡Únete a nuestra gran familia scout!
+                  ¡Ahora tú también puedes ser parte de nuestra gran familia scout!
                 </p>
               </div>
             </div>
